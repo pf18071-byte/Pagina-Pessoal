@@ -1,0 +1,109 @@
+<!-- atividade 04:Página Multimídia -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Multimídia — Cap. 4 / Ativ. 4</title>
+</head>
+<body>
+    <header>
+        <h1>Recursos Multimídia — Programação Web 1</h1>
+    </header>
+
+    <main>
+        <!-- primeira secção: Video -->
+        <section>
+            <h2>Estrutura básica HTML</h2>
+            <figure>
+                <video controls width="800" height="450" poster="capa_bs.jpg" preload="metadata">
+                    
+                    <source src="estruturahtml.mp4" type="video/mp4">
+                    <source src="estruturahtml.webm" type="video/webm">
+
+                    <track kind="subtitles" src="legendas/aula-html.vtt" srclang="pt" label="Português" default>
+
+                    <p>Seu navegador não suporta este vídeo. <a href="">Baixe o arquivo aqui</a>.</p>
+                </video>    
+
+                <figcaption>
+                No <a href="estruturahtml.mp4">video acima</a>é apresentado os conceitos essenciais que formam a estrutura do HTML para o embarque najornada do desenvolvimento web! 
+                </figcaption>
+            </figure>
+        </section>
+
+        <section>
+            <!-- segunda secção: audio -->
+            <h2>História do Desenvolvimento Web</h2>
+                <figure>
+                    <audio controls preload="metadata">
+                    <source src="Desenvolvimento_Web.mp3" type="audio/mpeg">
+                    <source src="Desenvolvimento_Web.ogg" type="audio/ogg">
+
+                                        <p>Seu navegador não suporta este player. 
+                        <a href="Desenvolvimento_Web.mp3">Clique aqui para baixar o áudio.</a>
+                        </p>
+                    </audio>  
+                    <figcaption>
+                       O <a href="Desenvolvimento_Web.mp3">audio acima</a>  referente à videoaula da Univesp - Universidade Virtual do Estado de São Paulo- apresenta <br>
+                        uma revisão histórica do nascimento da WWW e como ela se estrutura atualmente, tanto do ponto de vista de protocolos, quanto de tecnologias para o backend e para o frontend.
+                    </figcaption>
+                </figure>
+                  
+        <section>
+            <!-- terceira secção: iframe YouTube -->
+            <h2>Semântica HTML</h2>
+                <figure>
+                    <iframe
+                        width="700" 
+                        height="350"
+                        src="https://www.youtube-nocookie.com/embed/IHMOu_KEW-0"
+                        title="Video educativo acerca da semantica do HTML5 - MANUAL DEV"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen
+                        loading="lazy">
+                    </iframe>
+                        
+                     <figcaption>
+                        <b>O >video apresenta algumas das principais tags semânticas do html5.</b> Canal: Manual dev, Plataforma: YouTube.
+                     </figcaption>
+                </figure>
+        </section>
+                
+        <section>
+            <!-- quarta secção: Imagem responsiva -->
+             <h2>Ferramentas web</h2>
+            <figure>
+            <picture>
+                <source 
+                media="(min-width: 768px)" 
+                srcset="img/banner-wide.jpg">
+
+                <img 
+                src="Web_Development.jpg" 
+                alt="Ferramentas para o Desenvolvimento Web" 
+                width="400" 
+                height="400">
+            </picture>
+            
+            <figcaption>
+                O <a href="Web_Development.jpg">Banner acima </a>mostra algumas das principais ferramentas da <b>Programação Web.</b>
+            </figcaption>
+            </figure>
+        </section>
+
+    </main>
+
+     <footer>
+        <p>
+            Atividade 4 — Capítulo 4 | Programação Web 1 |
+            Aluno: [Pedro Ferreira Almeida] | Matrícula: [2026001042] |
+             <time datetime="2026-04-30">abril de 2026</time>
+        </p>
+    <p><a href="../index.html">← Voltar à página principal</a></p>
+    </footer>
+
+
+</body>
+</html>
