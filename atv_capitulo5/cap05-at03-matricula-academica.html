@@ -1,0 +1,121 @@
+<!-- atividade 03: Matrícula Acadêmica -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 05 — AT0N — Título da Atividade</title>
+</head>
+    <header>
+        <h1></h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+
+<body>
+    <main>
+        <p><em>* Campos obrigatórios</em></p>
+
+        <form action="https://httpbin.org/post" method="POST">
+        
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+
+                <div>
+                    <label for="id-nome">Nome completo *</label><br>
+                    <input type="text" id="id-nome" name="nome" required minlength="5" maxlength="100">
+                </div>
+                <br>
+
+                <div>
+                    <label for="id-cpf">CPF *</label><br>
+                    <input type="text" id="id-cpf" name="cpf" required 
+                        pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+                        placeholder="000.000.000-00" 
+                        title="CPF no formato 000.000.000-00">
+                </div>
+                <br>
+
+                <div>
+                    <label for="id-telefone">Telefone</label><br>
+                    <input type="tel" id="id-telefone" name="telefone" 
+                        pattern="\(\d{2}\)\s\d{4,5}-\d{4}" 
+                        placeholder="(82) 99999-9999">
+                </div>
+                <br>
+
+                <div>
+                    <label for="id-email">E-mail *</label><br>
+                    <input type="email" id="id-email" name="email" required>
+                </div>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Dados Acadêmicos</legend>
+
+                <div>
+                    <label for="id-curso">Curso *</label><br>
+                    <select id="id-curso" name="curso" required>
+                        <option value="">Selecione um curso...</option>
+                        
+                        <optgroup label="Computação">
+                            <option value="sistemas_informacao">Sistemas de Informação</option>
+                            <option value="ciencia_computacao">Ciência da Computação</option>
+                            <option value="engenharia_computacao">Engenharia da Computação</option>
+                        </optgroup>
+
+                        <optgroup label="Gestão">
+                            <option value="administracao">Administração</option>
+                            <option value="ciencias_contabeis">Ciências Contábeis</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <br>
+
+                <fieldset>
+                    <legend>Período</legend>
+                    <input type="radio" id="id-manha" name="periodo" value="manha">
+                    <label for="id-manha">Manhã</label>
+                    
+                    <input type="radio" id="id-tarde" name="periodo" value="tarde">
+                    <label for="id-tarde">Tarde</label>
+                    
+                    <input type="radio" id="id-noite" name="periodo" value="noite">
+                    <label for="id-noite">Noite</label>
+                </fieldset>
+                <br>
+
+                <div>
+                    <label for="id-ano">Ano de ingresso pretendido *</label><br>
+                    <input type="number" id="id-ano" name="ano_ingresso" min="2025" max="2030" required>
+                </div>
+            </fieldset>
+            <br>
+
+            <fieldset>
+                <legend>Áreas de Interesse</legend>
+                
+                <input type="checkbox" id="id-int-web" name="interesses[]" value="desenvolvimento_web">
+                <label for="id-int-web">Desenvolvimento Web</label><br>
+                
+                <input type="checkbox" id="id-int-bd" name="interesses[]" value="banco_dados">
+                <label for="id-int-bd">Banco de Dados</label><br>
+                
+                <input type="checkbox" id="id-int-ia" name="interesses[]" value="inteligencia_artificial">
+                <label for="id-int-ia">Inteligência Artificial</label><br>
+                
+                <input type="checkbox" id="id-int-seg" name="interesses[]" value="seguranca_informacao">
+                <label for="id-int-seg">Segurança da Informação</label><br>
+                
+                <input type="checkbox" id="id-int-infra" name="interesses[]" value="infraestrutura">
+                <label for="id-int-infra">Infraestrutura</label>
+            </fieldset>
+            <br>
+
+            <button type="submit">Solicitar matrícula</button>
+            <button type="reset">Limpar formulário</button>
+
+        </form>
+    </main>
+</body>
+</html>
