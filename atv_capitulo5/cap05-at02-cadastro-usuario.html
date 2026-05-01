@@ -1,0 +1,69 @@
+<!-- atividade 02: adastro de usuário -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PWEB1 — Cap. 05 — AT02 — cadastro de usuário</title>
+</head>
+    <header>
+        <h1>Cadastro de Usuário</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+<body>
+    <main>
+        <form action="https://httpbin.org/post" method="post">
+        <div>
+            <label for="id-nome">Nome completo:</label>
+            <input type="text" id="id-nome" name="nome" required minlength="3">
+        </div>
+        <br>
+
+        <div>
+            <label for="id-email">E-mail:</label>
+            <input type="email" id="id-email" name="email" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="id-senha">Senha:</label>
+            <input type="password" id="id-senha" name="senha" required minlength="8">
+        </div>
+        <br>
+
+        <div>
+            <label for="id-nascimento">Data de nascimento:</label>
+            <input type="date" id="id-nascimento" name="nascimento" required>
+        </div>
+        <br>
+
+        <fieldset>
+            <legend>Gênero</legend>
+            
+            <input type="radio" id="id-masculino" name="genero" value="masculino">
+            <label for="id-masculino">Masculino</label><br>
+            
+            <input type="radio" id="id-feminino" name="genero" value="feminino">
+            <label for="id-feminino">Feminino</label><br>
+            
+            <input type="radio" id="id-outro" name="genero" value="outro">
+            <label for="id-outro">Outro</label><br>
+            
+            <input type="radio" id="id-prefiro" name="genero" value="prefiro_nao_informar">
+            <label for="id-prefiro">Prefiro não informar</label>
+        </fieldset>
+        <br>
+
+        <div>
+            <input type="checkbox" id="id-aceite" name="aceite" value="sim" required>
+            <label for="id-aceite">Aceito os termos de uso</label>
+        </div>
+        <br>
+
+        <button type="submit">Criar conta</button>
+        <button type="reset">Limpar campos</button>
+
+    </form>
+    </main>
+</body>
+</html>
