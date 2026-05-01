@@ -1,0 +1,48 @@
+<!-- atividade 01: formulário de contato -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB1 — Cap. 05 — AT01 — Formulario de contrato</title>
+    
+</head>
+<body>
+    <header><h1>Formulário de Contato</h1>
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+    
+    <main>
+    
+        <form action="https://httpbin.org/get" method="GET">
+        
+            <div>
+                <label for="id-nome">Nome completo:</label>
+                <input type="text" id="id-nome" name="nome" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="id-email">E-mail:</label>
+                <input type="email" id="id-email" name="email" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="id-assunto">Assunto:</label>
+                <input type="text" id="id-assunto" name="assunto" required>
+            </div>
+            <br>
+
+            <div>
+                <label for="id-mensagem">Mensagem:</label>
+                <textarea id="id-mensagem" name="mensagem" rows="5" required></textarea>
+            </div>
+            <br>
+
+            <button type="submit">Enviar mensagem</button>
+
+        </form>
+    </main>
+</body>
+</html>
