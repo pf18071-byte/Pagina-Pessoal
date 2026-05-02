@@ -1,0 +1,187 @@
+<!-- atividade 05: Formulário de Pesquisa Acadêmica -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB1 — Cap. 05 — AT05 - Formulário de Pesquisa Acadêmica</title>
+</head>
+    <header><h1>Formulário de Pesquisa Acadêmica</h1></header>
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
+<body>
+
+    <p>* Campos obrigatórios</p>
+
+    <form action="https://httpbin.org/post" method="post" novalidate>
+        
+        <fieldset>
+            <legend>Perfil do estudante</legend>
+
+            <p>
+                <label for="nome">Nome completo: <span aria-hidden="true">*</span></label><br>
+                <input type="text" id="nome" name="nome" required aria-required="true" autocomplete="name">
+            </p>
+
+            <p>
+                <label for="matricula">Matrícula: <span aria-hidden="true">*</span></label><br>
+                <input type="text" id="matricula" name="matricula" pattern="\d{7}" required aria-required="true" aria-describedby="dica-matricula">
+                <br>
+                <small id="dica-matricula">Padrão: 7 dígitos numéricos.</small>
+            </p>
+
+            <p>
+                <label for="email">E-mail institucional: <span aria-hidden="true">*</span></label><br>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    pattern="[a-zA-Z0-9._%+\-]+@ifal\.edu\.br" 
+                    required 
+                    aria-required="true" 
+                    autocomplete="email" 
+                    aria-invalid="false" 
+                    aria-describedby="erro-email" 
+                    onblur="validarEmail(this)"
+                >
+                <p id="erro-email" role="alert" style="color: red; margin: 0;"></p>
+            </p>
+
+            <p>
+                <label for="periodo">Período atual: <span aria-hidden="true">*</span></label><br>
+                <select id="periodo" name="periodo" required aria-required="true">
+                    <option value="" disabled selected>Selecione seu período</option>
+                    <option value="1">1º Período</option>
+                    <option value="2">2º Período</option>
+                    <option value="3">3º Período</option>
+                    <option value="4">4º Período</option>
+                    <option value="5">5º Período</option>
+                    <option value="6">6º Período</option>
+                    <option value="7">7º Período</option>
+                    <option value="8">8º Período</option>
+                </select>
+            </p>
+
+            <fieldset>
+                <legend>Turno: <span aria-hidden="true">*</span></legend>
+                <label><input type="radio" name="turno" value="manha" required aria-required="true"> Manhã</label><br>
+                <label><input type="radio" name="turno" value="tarde" required aria-required="true"> Tarde</label><br>
+                <label><input type="radio" name="turno" value="noite" required aria-required="true"> Noite</label>
+            </fieldset>
+        </fieldset>
+
+        <fieldset>
+            <legend>Perfil tecnológico</legend>
+
+            <fieldset>
+                <legend>Tecnologias que conhece:</legend>
+                <label><input type="checkbox" name="tecnologias[]" value="html"> HTML</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="css"> CSS</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="js"> JavaScript</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="python"> Python</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="java"> Java</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="php"> PHP</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="sql"> SQL</label><br>
+                <label><input type="checkbox" name="tecnologias[]" value="git"> Git</label>
+            </fieldset>
+
+            <p>
+                <label for="linguagem">Linguagem de programação favorita:</label><br>
+                <select id="linguagem" name="linguagem">
+                    <option value="" disabled selected>Selecione uma linguagem</option>
+                    <optgroup label="Orientada a Objetos">
+                        <option value="java">Java</option>
+                        <option value="csharp">C#</option>
+                        <option value="ruby">Ruby</option>
+                    </optgroup>
+                    <optgroup label="Multiparadigma">
+                        <option value="python">Python</option>
+                        <option value="js">JavaScript</option>
+                        <option value="cpp">C++</option>
+                    </optgroup>
+                    <optgroup label="Funcional">
+                        <option value="haskell">Haskell</option>
+                        <option value="elixir">Elixir</option>
+                    </optgroup>
+                </select>
+            </p>
+
+            <p>
+                <label for="experiencia">Anos de experiência com programação:</label><br>
+                <input type="number" id="experiencia" name="experiencia" min="0" max="30">
+            </p>
+
+            <p>
+                <label for="portfolio">URL do portfólio ou LinkedIn:</label><br>
+                <input type="url" id="portfolio" name="portfolio" placeholder="https://" aria-describedby="dica-portfolio">
+                <br>
+                <small id="dica-portfolio">Insira a URL completa, incluindo https://</small>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Avaliação da disciplina</legend>
+
+            <p>
+                <label for="nota">Nota para a disciplina: <span id="valor-nota">5</span></label><br>
+                <input type="range" id="nota" name="nota" min="0" max="10" value="5" oninput="document.getElementById('valor-nota').textContent = this.value">
+            </p>
+
+            <fieldset>
+                <legend>Satisfação com o material didático: <span aria-hidden="true">*</span></legend>
+                <label><input type="radio" name="satisfacao" value="muito_satisfeito" required aria-required="true"> Muito satisfeito</label><br>
+                <label><input type="radio" name="satisfacao" value="satisfeito" required aria-required="true"> Satisfeito</label><br>
+                <label><input type="radio" name="satisfacao" value="neutro" required aria-required="true"> Neutro</label><br>
+                <label><input type="radio" name="satisfacao" value="insatisfeito" required aria-required="true"> Insatisfeito</label><br>
+                <label><input type="radio" name="satisfacao" value="muito_insatisfeito" required aria-required="true"> Muito insatisfeito</label>
+            </fieldset>
+
+            <p>
+                <label for="sugestoes">Sugestões de melhoria:</label><br>
+                <textarea id="sugestoes" name="sugestoes" maxlength="1000" rows="6"></textarea>
+            </p>
+
+            <p>
+                <label for="data_preenchimento">Data de preenchimento: <span aria-hidden="true">*</span></label><br>
+                <input type="date" id="data_preenchimento" name="data_preenchimento" required aria-required="true" aria-describedby="dica-data">
+                <br>
+                <small id="dica-data">A data não pode ser superior à data atual.</small>
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Consentimento e envio</legend>
+
+            <p>
+                <label>
+                    <input type="checkbox" name="consentimento" required aria-required="true">
+                    Autorizo o uso dos meus dados para fins acadêmicos <span aria-hidden="true">*</span>
+                </label>
+            </p>
+
+            <input type="hidden" name="pesquisa_id" value="PWEB1-2026-1">
+
+            <p>
+                <button type="submit">Enviar Pesquisa</button>
+            </p>
+        </fieldset>
+
+    </form>
+
+    <script>
+        function validarEmail(campo) {
+            const erro = document.getElementById('erro-email');
+            if (!campo.value.endsWith('@ifal.edu.br')) {
+                erro.textContent = 'Informe seu e-mail institucional (@ifal.edu.br)';
+                campo.setAttribute('aria-invalid', 'true');
+            } else {
+                erro.textContent = '';
+                campo.setAttribute('aria-invalid', 'false');
+            }
+        }
+
+        document.getElementById('data_preenchimento').max = new Date().toISOString().split('T')[0];
+    </script>
+
+</body>
+</html>
