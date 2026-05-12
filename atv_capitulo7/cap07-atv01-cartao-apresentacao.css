@@ -1,4 +1,4 @@
-/* Configuração do fundo da tela */
+
 body {
     background-color: #7fbbf8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -9,7 +9,7 @@ body {
     margin: 0;
 }
 
-/* Estilo do Cartão */
+
 .cartao {
     background-color: white;
     width: 450px;
@@ -19,7 +19,7 @@ body {
     box-shadow:  10px 20px rgba(0,0,0,0.1);
 }
 
-/* Tipografia */
+
 h1 {
     font-size: 2.0rem;
     font-weight: 700;
