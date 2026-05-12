@@ -1,0 +1,65 @@
+/* Configuração do fundo da tela */
+body {
+    background-color: #7fbbf8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do Cartão */
+.cartao {
+    background-color: white;
+    width: 450px;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow:  10px 20px rgba(0,0,0,0.1);
+}
+
+/* Tipografia */
+h1 {
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #060f11;
+    margin-bottom: 9px;
+}
+
+.cargo {
+    font-size: rem;
+    color: #636e72;
+    font-weight: 400;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #dfe6e9;
+    margin: 20px 0;
+}
+
+.email {
+    color: #0984e3;
+    font-size: 0.9rem;
+}
+
+.email1 {
+    color: #0984e3;
+    font-size: 0.9rem;
+}
+
+.contato {
+    color: #636e72;
+    font-size: 0.9rem;
+}
+
+
+.foto-perfil {
+    width: 150px ;  
+    height: 150px ; 
+    border-radius: 50%;      
+    object-fit: cover;
+    margin-bottom: 15px;
+    display: inline-block;   
+}
