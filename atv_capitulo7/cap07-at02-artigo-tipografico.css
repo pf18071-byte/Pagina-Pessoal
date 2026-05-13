@@ -1,0 +1,59 @@
+/* Reset Básico e Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Essencial para o cálculo de largura */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Web Font */
+    line-height: 1.6; /* Espaçamento entre linhas conforme solicitado */
+    background-color: #779def;
+    color: #333;
+    padding: 2rem;
+}
+
+/* Centralização e largura máxima */
+header, article, footer {
+    max-width: 800px; /* Largura máxima para leitura confortável */
+    margin: 0 auto;   /* Centraliza o elemento na tela */
+    background-color: #e0e8fe;
+    padding: 2rem;    /* Padding usando unidade relativa */
+}
+
+header {
+    border-bottom: 2px solid #560c0c;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem; /* Unidade rem */
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 2rem;
+    color: #153b60;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+blockquote {
+    font-style: italic;
+    border-left: 5px solid #3498db;
+    padding: 1rem 2rem;
+    margin: 1.5rem 0;
+    background: #ecf0f1;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    border-top: 1px solid #5e1313;
+    border-bottom: #560c0c;
+}
