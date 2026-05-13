@@ -1,0 +1,50 @@
+:root {
+  /* ── Paleta de cores ── */
+  --cor-primaria:    #0f172a; /* Dark Slate */
+  --cor-secundaria:  #3b82f6; /* Blue AI */
+  --cor-destaque:    #8b5cf6; /* Violet */
+  --cor-sucesso:     #10b981; /* Emerald */
+  --cor-erro:        #ef4444; /* Rose */
+  --cor-texto:       #1e293b;
+  --cor-texto-claro: #f8fafc;
+  --cor-fundo:       #ffffff;
+  --cor-fundo-alt:   #f1f5f9;
+
+  /* ── Tipografia ── */
+  --fonte-base:    'Inter', system-ui, sans-serif;
+  --fonte-titulo:  'Plus Jakarta Sans', sans-serif;
+
+  /* ── Tamanhos de fonte ── */
+  --texto-display: clamp(2.5rem, 6vw, 4.5rem);
+  --texto-h1:      clamp(1.75rem, 4vw, 3rem);
+  --texto-h2:      2rem;
+  --texto-h3:      1.5rem;
+  --texto-base:    1rem;
+  --texto-sm:      0.875rem;
+  --texto-xs:      0.75rem;
+
+  /* ── Espaçamento ── */
+  --espaco-xs: 0.25rem;
+  --espaco-sm: 0.5rem;
+  --espaco-md: 1rem;
+  --espaco-lg: 2rem;
+  --espaco-xl: 4rem;
+
+  /* ── Bordas ── */
+  --raio-sm:     4px;
+  --raio-md:     8px;
+  --raio-lg:     16px;
+  --raio-circulo: 9999px;
+
+  /* ── Sombras ── */
+  --sombra-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --sombra-md: 0 4px 6px rgba(0, 0, 0, 0.10);
+  --sombra-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  /* ── Transições ── */
+  --transicao: 250ms ease-in-out;
+
+  /* ── Layout ── */
+  --largura-max: 1100px;
+  --altura-nav: 70px;
+}
