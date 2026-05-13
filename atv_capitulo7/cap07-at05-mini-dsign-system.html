@@ -4,13 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PWEB1 — Cap. 07 — AT05 — Mini Design System</title>
-    <link rel="stylesheet" href="cap07-at05-mini-dsign-system.css">
+    <link rel="stylesheet" href="cap07-at05-mini-dsign-system(reset).css">
+    <link rel="stylesheet" href="cap07-at05-mini-dsign-system(style).css">
+    <link rel="stylesheet" href="cap07-at05-mini-dsign-system(variable).css">
 </head>
     <header>
         <h1>Mini Design System</h1>
         <p><a href="../index.html">← Voltar para a página principal</a></p>
     </header>
+    <header class="hero">
+        <h1 class="hero__titulo">A Era da Inteligência Artificial</h1>
+        <p class="hero__subtitulo">Documentação do AI Core: O sistema visual para a próxima fronteira tecnológica.</p>
+        <div class="hero__acoes">
+            <a href="#componentes" class="btn btn--primario hero__cta">Explorar Componentes</a>
+        </div>
+    </header>
 <body>
-    
+     
+
+    <main class="container" id="componentes">
+        
+        <section style="margin-bottom: var(--espaco-xl);">
+            <h2 class="section-title">01. Botões & Ações</h2>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                <button class="btn btn--primario">Iniciar Processamento</button>
+                <button class="btn btn--secundario">Ver Logs</button>
+                <button class="btn btn--perigo">Parar Instância</button>
+                <button class="btn btn--primario" disabled>Carregando Modelo...</button>
+            </div>
+        </section>
+
+        <section style="margin-bottom: var(--espaco-xl);">
+            <h2 class="section-title">02. Cartões de Informação</h2>
+            <article class="card">
+                <span class="card__badge">Deep Learning</span>
+                <div class="card__imagem"></div>
+                <div class="card__corpo">
+                    <h3 class="card__titulo">Redes Neurais</h3>
+                    <p class="card__texto">Entenda como as camadas de processamento mimetizam o cérebro humano para reconhecer padrões complexos.</p>
+                    <a class="card__link" href="#">Estudar Estruturas →</a>
+                </div>
+            </article>
+        </section>
+
+        <section style="margin-bottom: var(--espaco-xl);">
+            <h2 class="section-title">03. Design Tokens (Cores)</h2>
+            <table class="tabela-tokens">
+                <thead>
+                    <tr>
+                        <th>Visual</th>
+                        <th>Token</th>
+                        <th>Variável</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="amostra-cor" style="background-color: #0f172a;"></div></td>
+                        <td>Primary Dark</td>
+                        <td><code>--cor-primaria</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="amostra-cor" style="background-color: #3b82f6;"></div></td>
+                        <td>AI Blue</td>
+                        <td><code>--cor-secundaria</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="amostra-cor" style="background-color: #8b5cf6;"></div></td>
+                        <td>Violet Highlight</td>
+                        <td><code>--cor-destaque</code></td>
+                    </tr>
+                    <tr>
+                        <td><div class="amostra-cor" style="background-color: #10b981;"></div></td>
+                        <td>Success Green</td>
+                        <td><code>--cor-sucesso</code></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="section-title">04. Formulário de Treinamento</h2>
+            <form class="form">
+                <div class="form__grupo">
+                    <label class="form__label" for="nome">Nome do Modelo</label>
+                    <input type="text" id="nome" class="form__input" placeholder="Ex: GPT-Next" required>
+                </div>
+                <div class="form__grupo">
+                    <label class="form__label" for="email">E-mail do Desenvolvedor</label>
+                    <input type="email" id="email" class="form__input" placeholder="dev@ai.com" required>
+                    <span class="form__mensagem-erro">Por favor, insira um e-mail válido.</span>
+                </div>
+                <div class="form__grupo">
+                    <label class="form__label" for="tokens">Quantidade de Tokens</label>
+                    <input type="number" id="tokens" class="form__input" placeholder="1000" min="100">
+                </div>
+                <button type="submit" class="btn btn--primario" style="width: 100%;">Solicitar Treinamento</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer style="text-align: center; padding: var(--espaco-xl); background: var(--cor-fundo-alt); margin-top: var(--espaco-xl);">
+        <p>© 2024 AI Core Design System - Protótipo Acadêmico</p>
+    </footer>
+
 </body>
 </html>
