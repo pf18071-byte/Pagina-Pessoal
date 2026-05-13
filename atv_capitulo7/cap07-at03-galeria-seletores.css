@@ -1,0 +1,179 @@
+/* Configurações Globais de Layout (Opcional, para melhor visualização) */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #3498db;
+}
+
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- SEÇÃO 1: Seletores de Atributo --- */
+
+/* Começa com https */
+#sec-atributo a[href^="https"] {
+    color: green;
+}
+
+/* Começa com http (e não https) - Usamos not para evitar conflito */
+#sec-atributo a[href^="http"]:not([href^="https"]) {
+    color: red;
+}
+#sec-atributo a[href^="http"]:not([href^="https"])::after {
+    content: " ⚠";
+}
+
+/* Termina com .pdf */
+#sec-atributo a[href$=".pdf"] {
+    color: orange;
+}
+#sec-atributo a[href$=".pdf"]::after {
+    content: " [PDF]";
+}
+
+/* Começa com # (âncoras) */
+#sec-atributo a[href^="#"] {
+    color: gray;
+    font-style: italic;
+}
+
+/* Target blank */
+#sec-atributo a[target="_blank"]::after {
+    content: " ↗";
+}
+
+/* --- SEÇÃO 2: Pseudo-classes Estruturais --- */
+
+#sec-estrutural li:first-child {
+    font-weight: bold;
+}
+
+#sec-estrutural li:last-child {
+    color: #e67e22;
+}
+
+/* Pares */
+#sec-estrutural li:nth-child(even) {
+    background-color: #ecf0f1;
+}
+
+/* Ímpares */
+#sec-estrutural li:nth-child(odd) {
+    background-color: #fdfefe;
+}
+
+/* Terceiro item especificamente */
+#sec-estrutural li:nth-child(3) {
+    border-left: 5px solid #3498db;
+    padding-left: 5px;
+}
+
+/* --- SEÇÃO 3: Pseudo-classes de Estado --- */
+
+input {
+    display: block; /* Para organização visual */
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+input:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+input:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
+input:required {
+    border-left: 4px solid #f1c40f;
+}
+
+/* Validação: o uso do :not(:placeholder-shown) ajuda a não mostrar erro com campo vazio */
+input:valid {
+    border-color: #2ecc71;
+}
+
+input:invalid {
+    border-color: #e74c3c;
+}
+
+/* Checkbox checked + label adjacente */
+input[type="checkbox"]:checked + label, 
+label:has(input[type="checkbox"]:checked) {
+    font-weight: bold;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+/* --- SEÇÃO 4: Pseudo-elementos --- */
+
+.citacao::before {
+    content: "“";
+    font-size: 2rem;
+    color: #3498db;
+    vertical-align: middle;
+}
+
+.citacao::after {
+    content: "”";
+    font-size: 2rem;
+    color: #3498db;
+    vertical-align: middle;
+}
+
+.obrigatorio::after {
+    content: " *";
+    color: red;
+}
+
+/* Seleção Global */
+::selection {
+    background-color: #3498db;
+    color: white;
+}
+
+.input-custom::placeholder {
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* --- SEÇÃO 5: Combinadores e :not() --- */
+
+/* Parágrafo IMEDIATAMENTE após h3 */
+#sec-combinadores h3 + p {
+    font-size: 1.2rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Itens que NÃO possuem a classe .ativo */
+#sec-combinadores li:not(.ativo) {
+    opacity: 0.5;
+}
+
+/* Itens que POSSUEM a classe .ativo */
+#sec-combinadores li.ativo {
+    font-weight: bold;
+}
+
+#sec-combinadores li.ativo::before {
+    content: "✔ ";
+    color: green;
+}
