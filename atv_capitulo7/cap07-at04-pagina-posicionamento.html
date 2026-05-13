@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PWEB1 — Cap. 07 — AT04 — Página com posicionamento</title>
+    <link rel="stylesheet" href="cap07-at04-pagina-posicionamento.css"> </head>
+<body id="topo">
+    <header>
+        <h1>Página com posicionamento</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
+    <nav class="nav-fixa">
+        <div class="container">
+            <strong>DevArtigo</strong>
+            <a href="#artigo">Ler Artigo</a>
+        </div>
+    </nav>
+
+    <main class="conteudo-principal">
+        <section>
+            <h1>Dominando o CSS Position</h1>
+            <p>Role a página para observar os efeitos de posicionamento em ação.</p>
+            
+            <article class="cartao-destaque">
+                <span class="selo">DESTAQUE</span>
+                <h3>Entendendo o fluxo</h3>
+                <p>Este cartão utiliza <em>position: relative</em> para que o selo no canto superior possa usar <em>position: absolute</em> sem sair de dentro dele.</p>
+            </article>
+        </section>
+
+        <section id="artigo">
+            <h2 class="titulo-sticky">Conteúdo Profundo</h2>
+            
+            <p>
+                No desenvolvimento web moderno, é essencial entender como 
+                <span class="tooltip-container">
+                    posicionar elementos
+                    <span class="tooltip-texto">Position: absolute, relative, fixed e sticky!</span>
+                </span> 
+                garante uma interface de usuário intuitiva e funcional.
+            </p>
+
+            <div class="texto-longo">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligula eu tempor congue, eros est euismod turpis, id tincidunt sapien risus a quam. Maecenas fermentum consequat mi. Donec fermentum. Pellentesque malesuada nulla a mi. Duis sapien sem, aliquet nec, commodo eget, consequat quis, neque.</p>
+                <p>Repetindo o conteúdo para garantir altura de rolagem...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Mauris ac sem duis.</p>
+                <p>Mais texto para scroll...</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue.</p>
+            </div>
+        </section>
+    </main>
+
+    <a href="#topo" class="btn-topo" title="Voltar ao topo">↑</a>
+
+</body>
+</html>
