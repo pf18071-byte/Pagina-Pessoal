@@ -1,0 +1,245 @@
+/* ==========================================================================
+   1. RESET & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    flex: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e5e5e5;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    color: #e65c00;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #b34700;
+}
+
+/* ==========================================================================
+   2. ESTRUTURA PRINCIPAL (FLEXBOX)
+   ========================================================================== */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #333333;
+}
+
+/* Container do conteúdo do meio + sidebar */
+.main.supporting {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #444444;
+    color: #ffffff;
+}
+
+/* ==========================================================================
+   3. INTRO / HEADER
+   ========================================================================== */
+.intro {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 5px solid #e65c00;
+}
+
+.intro h1 {
+    font-size: 2.5rem;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.intro h2 {
+    font-size: 1.2rem;
+    color: #666666;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.summary {
+    background-color: #f9f9f9;
+    border: 1px solid #dddddd;
+    padding: 15px;
+    margin-bottom: 25px;
+    border-radius: 4px;
+}
+
+.preamble h3 {
+    color: #e65c00;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.preamble p {
+    margin-bottom: 15px;
+    color: #505050;
+}
+
+/* ==========================================================================
+   4. CONTEÚDO SUPORTE (EXPLANATION, PARTICIPATION, ETC)
+   ========================================================================== */
+.explanation, .participation, .benefits, .requirements {
+    background-color: #3a3a3a;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border-left: 4px solid #e65c00;
+}
+
+.explanation h3, .participation h3, .benefits h3, .requirements h3 {
+    color: #ff8533;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    border-bottom: 1px solid #555555;
+    padding-bottom: 5px;
+}
+
+.explanation p, .participation p, .benefits p, .requirements p {
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+/* Rodapé interno da seção requirements */
+.requirements p[role="contentinfo"] {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px dashed #555555;
+    font-size: 0.85rem;
+    color: #cccccc;
+}
+
+/* ==========================================================================
+   5. SIDEBAR (MENU DE DESIGN & LINKS)
+   ========================================================================== */
+.sidebar {
+    background-color: #e65c00;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.sidebar h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 5px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.9rem;
+}
+
+.sidebar a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* Ajuste específico para a lista de designers */
+.design-selection li {
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   6. FOOTER (VALIDADORES)
+   ========================================================================== */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px 0;
+    background-color: #222222;
+    width: 100%;
+}
+
+footer a {
+    background-color: #444444;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+footer a:hover {
+    background-color: #e65c00;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Ocultar as divs extras antigas que não são necessárias no layout moderno */
+.extra1, .extra2, .extra3, .extra4, .extra5, .extra6 {
+    display: none;
+}
+
+/* ==========================================================================
+   7. RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+
+/* Layout para Tablet e Desktop */
+@media screen and (min-width: 768px) {
+    
+    /* Transforma o corpo do site em duas colunas (Conteúdo e Sidebar) */
+    .page-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* O Header ocupa toda a largura superior */
+    .intro {
+        flex: 1 1 100%;
+    }
+
+    /* Área principal ganha 65% de largura */
+    .main.supporting {
+        flex: 1 1 65%;
+        order: 1; /* Garante que fique à esquerda */
+    }
+
+    /* Sidebar ganha 35% de largura lateral */
+    .sidebar {
+        flex: 1 1 35%;
+        order: 2; /* Garante que fique à direita */
+        box-shadow: inset 5px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Footer ocupa toda a largura inferior */
+    footer {
+        order: 3;
+    }
+}
+
+/* Layout refinado para telas grandes (Desktop Largo) */
+@media screen and (min-width: 1024px) {
+    .main.supporting {
+        padding: 40px;
+    }
+    
+    .sidebar {
+        padding: 40px 20px;
+    }
+}
